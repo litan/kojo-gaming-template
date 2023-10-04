@@ -1,35 +1,12 @@
 # kojo-game
 
-A [libGDX](https://libgdx.com/) project generated with [gdx-liftoff](https://github.com/tommyettinger/gdx-liftoff).
+This project provides a templete to help you build desktop and android versions of your game (that is built with kojo-gaming).
 
-This project was generated with a template including simple application launchers and an `ApplicationAdapter` extension that draws libGDX logo.
+To get you running, this project already contains a sample `lunar lander` game. What you want to do is to replace `lunar lander` with your own game.
 
-## Platforms
-
-- `core`: Main module with the application logic shared by all platforms.
-- `lwjgl3`: Primary desktop platform using LWJGL3.
-- `android`: Android mobile platform. Needs Android SDK.
-
-## Gradle
-
-This project uses [Gradle](http://gradle.org/) to manage dependencies.
-The Gradle wrapper was included, so you can run Gradle tasks using `gradlew.bat` or `./gradlew` commands.
-Useful Gradle tasks and flags:
-
-- `--continue`: when using this flag, errors will not stop the tasks from running.
-- `--daemon`: thanks to this flag, Gradle daemon will be used to run chosen tasks.
-- `--offline`: when using this flag, cached dependency archives will be used.
-- `--refresh-dependencies`: this flag forces validation of all dependencies. Useful for snapshot versions.
-- `android:lint`: performs Android project validation.
-- `build`: builds sources and archives of every project.
-- `cleanEclipse`: removes Eclipse project data.
-- `cleanIdea`: removes IntelliJ project data.
-- `clean`: removes `build` folders, which store compiled classes and built archives.
-- `eclipse`: generates Eclipse project data.
-- `idea`: generates IntelliJ project data.
-- `lwjgl3:jar`: builds application's runnable jar, which can be found at `lwjgl3/build/libs`.
-- `lwjgl3:run`: starts the application.
-- `test`: runs unit tests (if any).
-
-Note that most tasks that are not specific to a single project can be run with `name:` prefix, where the `name` should be replaced with the ID of a specific project.
-For example, `core:clean` removes `build` folder only from the `core` project.
+High level steps:
+- remove lunar lander assets from the assets dir. After this, the dir should contain libgdx.png and OepnSans.ttf
+- add your game assets to the assets dir
+- replace `/home/lalit/work/kojo-gaming-template/core/src/main/scala/net/kogics/kojo/game/lander.scala` with your (one or more) scala files. One of these files should define a `Main` class
+- run `:lwjgl3:distZip` to build your desktop distribution
+- run `:android:assembleDebug` to build your android apk
