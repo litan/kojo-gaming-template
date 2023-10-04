@@ -1,8 +1,8 @@
-# kojo-game
+### Desktop and Android games 
 
-This project provides a templete to help you build desktop and android versions of your game (that is built with kojo-gaming).
+This project provides a templete to help you build desktop and android versions of your games (built using kojo-gaming).
 
-To get you running, this project already contains a sample `lunar lander` game. What you want to do is to replace `lunar lander` with your own game.
+To get you running, this project already contains a sample `lunar lander` game. What you want to do is to replace `lunar lander` with a game of your own.
 
 High level steps:
 - remove lunar lander assets from the assets dir. After this, the dir should contain libgdx.png and OepnSans.ttf
