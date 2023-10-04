@@ -1,0 +1,9 @@
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+eclipse.project.name = appName + '-core'
+
+dependencies {
+  api "com.badlogicgames.gdx:gdx:$gdxVersion"
+  api "org.scala-lang:scala-library:$scalaVersion"
+  api "com.badlogicgames.gdx:gdx-freetype:$gdxVersion"
+  api files('../lib/kojo-gaming-core-0.1.1.jar')
+}
